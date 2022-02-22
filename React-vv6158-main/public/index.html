@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <h1 style="font-family:verdana; font-size:36px">
+        <b> 
+            <h1  style="text-align:center">SWEN-344 Web Assignment 0</h1>
+        </b>
+    </h1>
+    <h2  style="text-align:center; font-family:Impact " >Section 02</h2>
+</head>
+<body style = "font-family: Segoe UI;" >
+    <script>
+        function food(){
+            var foodType = document.getElementById("food");
+            var displaytext = foodType.options[foodType.selectedIndex].text;
+            document.getElementById("txtvalue").value=displaytext;
+        }
+
+        function Black(){
+            document.getElementById("txtvalue").style.color = "Black";
+        }
+        function Red(){
+            document.getElementById("txtvalue").style.color = "Red";
+        }
+        function Green(){
+            document.getElementById("txtvalue").style.color = "Green";
+        }
+        function Blue(){
+            document.getElementById("txtvalue").style.color = "Blue";
+        }
+        function Purple(){
+            document.getElementById("txtvalue").style.color = "Purple";
+        }
+
+    </script>
+    
+    <span style="display: flex; justify-content: center;"> 
+        <select name="food" id="food" onchange = "food();"  >
+            <option value="Default"></option>
+            <option value="Protein">Protein</option>
+            <option value="Carbs">Carbs</option>
+            <option value="Fruits">Fruits</option>
+            <option value="Vegetables">Vegetables</option>
+            <option value="Sweets">Sweets</option>
+        </select>
+    </span>
+    <form>
+        <span style="display: flex; justify-content: center;" >
+                <input type="radio" id="color1"
+                name="color" value="Black" onclick="Black()">
+                <label for="color1" >Black</label>
+        </span>
+        <span style="display: flex; justify-content: center; margin-right: 11px ;" >
+                <input type="radio" id="color2"
+                name="color" value="Red" onclick="Red()">
+                <label for="color2">Red  </label>
+        </span>
+        <span style="display: flex; justify-content: center; margin-left: 3px;" >
+                <input type="radio" id="color3"
+                name="color" value="Green" onclick="Green()">
+                <label for="color3" >Green</label>
+        </span>
+        <span style="display: flex; justify-content: center; margin-right: 9px ;" >
+                <input type="radio" id="color4"
+                name="color" value="Blue" onclick="Blue()">
+                <label for="color4" >Blue</label>
+        </span>
+        <span style="display: flex; justify-content: center; margin-left: 4px ;" >
+                <input type="radio" id="color5"
+                name="color" value="Purple" onclick="Purple()">
+                <label for="color5">Purple</label>
+        </span>
+    </form>
+
+    <span style="display: flex; justify-content: center;">
+        <textarea readonly style="background: white; font-size: 20px; width: 320px; height: 90px; margin: auto; margin-top: 30px; resize: none;" type = "text" id = "txtvalue" >Food Type...</textarea>
+    </span>
+
+    <meta name="description" content="First web assignment">
+    <meta name="author" content="Vishwesh Venkatramani">
+</body>
+</html>

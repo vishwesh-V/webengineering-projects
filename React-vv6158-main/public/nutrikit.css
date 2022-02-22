@@ -1,0 +1,30 @@
+body {
+    font-family: 'Segoe UI';
+    background-color: antiquewhite;
+}
+
+.headingOne {
+    text-align: center;
+    font-weight: bold;
+}
+
+.subHeading {
+    text-align: center;
+}
+
+.main {
+    display: grid;
+    text-align: left;
+    justify-items: center;
+    margin-left: 15%;
+    margin-right: 15%;
+    grid-template-columns: auto auto auto auto;
+}
+
+.block {
+    display: block;
+}
+
+.select {
+    width: 200px;
+}

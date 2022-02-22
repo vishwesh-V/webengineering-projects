@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Client 1</title>
+  <meta name="description" content="NutriKit">
+  <meta name="author" content="Vishwesh Venkatramani">
+  <link rel="stylesheet" href="nutrikit.css">
+  <script src="nutrikit.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <h1 class="headingOne">NutriKit Food Planner</h1>
+    <h3 class="subHeading">NutriKit allows you to select your groceries, and track your nutritional progress (good or bad)</h3>
+    <div class>
+        <div class = "main">
+            <span> 
+                <label class = "block" for = "food">Categories</label>
+                <select id="food" onchange = "changeFoodType();"  >
+                    <option value="Default"></option>
+                    <option value="Protein">Proteins</option>
+                    <option value="Fruits">Fruits</option>
+                    <option value="Vegetables">Vegetables</option>
+                    <option value="Dairy">Dairy</option>
+                    <option value="Grain">Grain</option>
+                </select>
+            </span>
+
+            <span>
+                <label class="block" for="menuItems">Menu Items</label>
+                <select class='select' id="menuItems" size=5 onChange='changeFoodItem()'>
+                    <option>Select a category</option>
+                </select>
+            </span>
+            
+            <div>
+                <br>
+                <button type ="button" id="buttonClick" onClick="edit()">>></button>
+            </div>
+        
+            <span>
+                <label class="block" for="selectedItems">Selected Items</label>
+                <select class='select' id="selectedItems" size=5 onChange='selectedItems()'></select>
+                <p id="calories" class="block">Total Calories: 0</p>
+            </span>
+        
+              
+        </div>
+        
+    </div>
+    
+</body>
+</html>
